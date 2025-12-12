@@ -30,7 +30,7 @@ Key Features
 - **Socket.IO** - Real-time communication
 - **Multer** - File uploads
 
-### AI/ML Services (Coming Soon)
+### AI/ML Services 
 - **Python (Flask/FastAPI)** - Microservice for AI processing
 - **face_recognition** - Biometric verification
 - **Tesseract-OCR** - Ticket validation
