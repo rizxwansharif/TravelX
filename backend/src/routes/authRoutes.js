@@ -1,13 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const { register, login, getMe } = require('../controllers/authController');
+const { protect } = require('../middleware/authMiddleware');
 
-// Placeholder routes - controllers to be implemented
-router.post('/register', (req, res) => {
-  res.json({ message: 'Register route' });
-});
+// @route   POST /api/auth/register
+router.post('/register', register);
 
-router.post('/login', (req, res) => {
-  res.json({ message: 'Login route' });
-});
+// @route   POST /api/auth/login
+router.post('/login', login);
+
+// @route   GET /api/auth/me
+router.get('/me', protect, getMe);
 
 module.exports = router;
